@@ -4,76 +4,153 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Professional Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- You can link to an external CSS file or embed styles here -->
     <style>
-        /* CSS styles can also be embedded here */
-        /* Example styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
+            color: #333;
         }
         header {
             background-color: #343a40;
-            color: #ffffff;
+            color: #fff;
             padding: 20px 0;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        .container {
-            max-width: 1200px;
+        h1 {
+            margin: 0;
+        }
+        nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #6c757d;
+            margin: 0 5px;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #495057;
+        }
+        section {
+            padding: 20px;
             margin: 20px auto;
-            padding: 0 20px;
+            max-width: 800px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #343a40;
+        }
+        p {
+            color: #6c757d;
         }
         .portfolio-item {
-            background-color: #ffffff;
-            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .portfolio-item div {
+            flex-basis: 30%;
+            padding: 10px;
             margin-bottom: 20px;
             border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .portfolio-item div:hover {
+            transform: translateY(-5px);
         }
         .portfolio-item img {
-            max-width: 100%;
-            height: auto;
+            width: 100%;
             border-radius: 5px;
         }
         footer {
             background-color: #343a40;
-            color: #ffffff;
+            color: #fff;
             text-align: center;
-            padding: 10px 0;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        /* Different color scheme */
+        .alt-header {
+            background-color: #007bff;
+        }
+        .alt-nav a {
+            background-color: #28a745;
+        }
+        .alt-nav a:hover {
+            background-color: #218838;
+        }
+        .alt-section {
+            background-color: #f8f9fa;
+            box-shadow: none;
+            border: 1px solid #ced4da;
+        }
+        .alt-section h2 {
+            color: #343a40;
+        }
+        .alt-section p {
+            color: #6c757d;
+        }
+        .alt-footer {
+            background-color: #6c757d;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Professional Portfolio</h1>
-    </header>
+<header class="alt-header">
+    <h1>Professional Portfolio</h1>
+    <nav class="alt-nav">
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-    <div class="container">
-        <div class="portfolio-item">
-            <img src="project1.jpg" alt="Project 1">
-            <h2>Project 1</h2>
-            <p>Description of Project 1 goes here.</p>
-            <a href="project1.html">View Project</a>
+<section id="about" class="alt-section">
+    <h2>About Me</h2>
+    <p>Welcome to my professional portfolio. I am a web developer with expertise in HTML, CSS, and JavaScript. I am passionate about creating clean, responsive, and user-friendly websites.</p>
+</section>
+
+<section id="portfolio" class="alt-section">
+    <h2>Portfolio</h2>
+    <div class="portfolio-item">
+        <div>
+            <img src="https://via.placeholder.com/300" alt="Project 1">
+            <p>Project 1 Description</p>
         </div>
-
-        <div class="portfolio-item">
-            <img src="project2.jpg" alt="Project 2">
-            <h2>Project 2</h2>
-            <p>Description of Project 2 goes here.</p>
-            <a href="project2.html">View Project</a>
+        <div>
+            <img src="https://via.placeholder.com/300" alt="Project 2">
+            <p>Project 2 Description</p>
         </div>
-
-        <!-- Add more portfolio items as needed -->
-
+        <div>
+            <img src="https://via.placeholder.com/300" alt="Project 3">
+            <p>Project 3 Description</p>
+        </div>
     </div>
+</section>
 
-    <footer>
-        <p>&copy; 2024 Professional Portfolio</p>
-    </footer>
+<section id="contact" class="alt-section">
+    <h2>Contact</h2>
+    <p>Email: example@example.com</p>
+    <p>Phone: 123-456-7890</p>
+</section>
+
+<footer class="alt-footer">
+    <p>&copy; 2024 Professional Portfolio</p>
+</footer>
 
 </body>
 </html>
